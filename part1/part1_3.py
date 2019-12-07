@@ -19,3 +19,11 @@ def reverse(x):
 reverse(x)
 print(x)
 
+def solution(list_):
+    list_.reverse()
+    for items in list_:
+        if isinstance(items,list):
+            solution(items)    
+    return list_
+
+print(solution([1,[2,3],4,[5,[6,7],8],9]))
